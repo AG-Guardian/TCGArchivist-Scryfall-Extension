@@ -1,1 +1,1 @@
-# TCGArchivist-Scryfall-Integration
+# TCGArchivist-Scryfall-Extension
