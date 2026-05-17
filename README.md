@@ -1,0 +1,1 @@
+# TCGArchivist-Scryfall-Integration
