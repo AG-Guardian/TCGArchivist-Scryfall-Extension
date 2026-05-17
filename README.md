@@ -22,6 +22,23 @@ Works on Scryfall search pages (`https://scryfall.com/search*`).
   - `Set code` and `Collector number` (used for printing labels and links)
   - `Finish` (optional; shown in badges)
 
+## Chrome: Tampermonkey extension settings
+
+If you use **Google Chrome** or other **Chromium** browsers, configure Tampermonkey once so userscripts can run (including on Scryfall) and optional local file access works.
+
+1. Open Chrome’s extensions page:
+   - Menu → **Extensions** → **Manage Extensions**, or
+   - Enter `chrome://extensions/` in the address bar.
+2. Find **Tampermonkey** and open **Details** (or click the extension name).
+3. Turn on:
+   - **Allow User Scripts** — required on recent Chrome versions for Tampermonkey to inject userscripts on websites like Scryfall.
+   - **Allow access to file URLs** — allows the extension to run on `file://` pages (useful if you open saved HTML locally or test from a file); not required for normal use on [scryfall.com](https://scryfall.com).
+4. Confirm Tampermonkey is **Enabled** on the same page.
+
+You may need to reload any open Scryfall tabs after changing these settings.
+
+> **Firefox / Edge:** These exact toggles are Chrome-specific. On Firefox, ensure Tampermonkey is allowed on Scryfall when prompted. On Edge, check **Manage extension** for similar permission options if scripts do not run.
+
 ## Installing
 
 ### Install from GitHub (recommended)
@@ -94,7 +111,7 @@ The collection is saved in Tampermonkey storage. You only need to re-import when
 
 | Problem | What to try |
 |--------|-------------|
-| Controls missing | Hard refresh; confirm script is enabled; URL must be `/search...` |
+| Controls missing | Hard refresh; confirm script is enabled; URL must be `/search...`; on Chrome, enable **Allow User Scripts** for Tampermonkey (see above) |
 | Dropdown disabled | Import a CSV first; wait if a search is still loading |
 | “No collection loaded” in summary | Click **Import CSV** |
 | “Could not load full search” | Check network; retry; Scryfall may be rate-limiting—wait and try again |
